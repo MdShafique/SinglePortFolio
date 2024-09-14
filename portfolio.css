@@ -1,0 +1,63 @@
+/* Global reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden; /* Ensure there's no scrolling */
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #B5BFC3;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
+}
+
+.navbar-left h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar-middle ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-middle ul li {
+    margin: 0 10px;
+}
+
+.navbar-middle ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-right a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+
+
+
+.maintanance{
+    text-align: center;
+    margin-top: 300px;
+    font-size: 50px;
+    font-weight: 700;
+}

@@ -1,0 +1,293 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden; /* Ensure there's no scrolling */
+}
+
+/* Header Section (Combines Nav and Hero) */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Sticky Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #B5BFC3;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
+}
+
+.navbar-left h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar-middle ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-middle ul li {
+    margin: 0 10px;
+}
+
+.navbar-middle ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-right a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+/* Hero Section Styling */
+
+.hero {
+    flex: 1; /* Take up the remaining space after the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background-color: #f4f4f4;
+    position: relative;
+    height: 100%;
+    overflow: hidden; /* Ensure the circles don’t cause scrollbars */
+}
+
+/* Add small circles to the background */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 100px;
+    height: 100px;
+    background-color: #264653;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 80px;
+    height: 80px;
+    background-color: #264653;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.hero .circle-background {
+    position: absolute;
+    background-color: #264653;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.circle-background.one {
+    top: 15%;
+    left: 10%;
+    width: 120px;
+    height: 120px;
+}
+
+.circle-background.two {
+    top: 50%;
+    left: 25%;
+    width: 100px;
+    height: 100px;
+}
+
+.circle-background.three {
+    bottom: 20%;
+    right: 15%;
+    width: 90px;
+    height: 90px;
+}
+
+.circle-background.four {
+    top: 70%;
+    right: 10%;
+    width: 110px;
+    height: 110px;
+}
+
+/* Left Section (Text) */
+.hero-left {
+    width: 50%;
+    z-index: 2;
+}
+
+.hero-left h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.animated-text {
+    font-size: 24px;
+    color: #f4a261;
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+}
+
+.animated-text span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: show-text 16s infinite;
+    font-size: 24px;
+    color: #f4a261;
+}
+
+.animated-text span:nth-child(1) { animation-delay: 0s; }
+.animated-text span:nth-child(2) { animation-delay: 4s; }
+.animated-text span:nth-child(3) { animation-delay: 8s; }
+.animated-text span:nth-child(4) { animation-delay: 12s; }
+
+@keyframes show-text {
+    0% { opacity: 0; transform: translateY(100%); }
+    5% { opacity: 1; transform: translateY(0); }
+    25% { opacity: 1; }
+    30% { opacity: 0; transform: translateY(-100%); }
+    100% { opacity: 0; }
+}
+
+/* Right Section (Circle) */
+.hero-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.main-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #264653;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circle-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+
+/* For tablets */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .hero-left, .hero-right {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-left h1 {
+        font-size: 36px;
+    }
+
+    .animated-text {
+        font-size: 20px;
+    }
+
+    .main-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .circle-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Stack the navbar links vertically */
+    .navbar-middle ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-middle ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .hero-left h1 {
+        font-size: 28px;
+    }
+
+    .animated-text {
+        font-size: 18px;
+    }
+
+    .main-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .circle-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Align text and image center */
+    .hero-left, .hero-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-middle ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-middle ul li {
+        margin: 5px 0;
+    }
+}
