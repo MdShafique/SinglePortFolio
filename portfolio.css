@@ -55,9 +55,101 @@ body {
 
 
 
-.maintanance{
+
+
+h1, h2 {
     text-align: center;
-    margin-top: 300px;
-    font-size: 50px;
-    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    color: #666;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 20px 0;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Portfolio Grid */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio-item {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-info p {
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.portfolio-info h4 {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Hover Effect */
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .portfolio-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 100%;
+    }
 }

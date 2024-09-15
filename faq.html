@@ -30,6 +30,81 @@
             <a href="#"><i class="fab fa-github"></i></a>
         </div>
     </nav>
-    <h1 class="maintanance">WOW! Developer Still Sleeping Now</h1>
+    
+    <section class="faq-section">
+        <h2>FAQ</h2>
+        <h1>DO YOU HAVE ANY QUESTION?</h1>
+    
+        <!-- FAQ Items -->
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>WHAT IS ONLINE RESUME?</span>
+                <i>&#x25BC;</i>
+            </div>
+            <div class="faq-answer">
+                <p>It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.</p>
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>HOW TO CHOOSE A BEST RESUME?</span>
+                <i>&#x25BC;</i>
+            </div>
+            <div class="faq-answer">
+                <p>Choosing the best resume is a matter of balancing the design and layout with the clarity and readability of the content. Make sure to include relevant sections such as education, work experience, and contact information.</p>
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>HOW TO MAKE AN ONLINE PORTFOLIO?</span>
+                <i>&#x25BC;</i>
+            </div>
+            <div class="faq-answer">
+                <p>Making an online portfolio involves creating a website that showcases your work, skills, and professional accomplishments. It should be easy to navigate and visually appealing.</p>
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>HOW TO SHOW MY WORK ON PORTFOLIO?</span>
+                <i>&#x25BC;</i>
+            </div>
+            <div class="faq-answer">
+                <p>Display your work in an organized manner by creating sections for different projects, with images, descriptions, and links if applicable. Make sure it is easy for users to find the information they need.</p>
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>HOW TO HOST MY ONLINE PORTFOLIO?</span>
+                <i>&#x25BC;</i>
+            </div>
+            <div class="faq-answer">
+                <p>You can host your online portfolio on platforms like GitHub Pages, Netlify, or other website hosting services that offer easy deployment for static websites.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+    
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Toggle active class on current faq-item
+                item.classList.toggle('active');
+    
+                // Remove active class from other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
